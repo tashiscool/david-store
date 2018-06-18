@@ -1,7 +1,7 @@
 import 'fetch-everywhere'
 import 'es6-promise'
 
-import Config from './config'
+import ConfigIface from './configIFace'
 import RequestFactoryMock from './factories/requestmock'
 import StorageFactory from './factories/storage'
 import ProductsEndpoint from './endpoints/products'
@@ -61,6 +61,6 @@ export default class Moltin {
 }
 
 // Export a function to instantiate the Moltin class
-const gateway = config => new Moltin(new Config(config))
+const gateway = config => new Moltin(new ConfigIface(config))
 
 export { gateway }
